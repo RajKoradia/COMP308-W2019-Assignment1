@@ -1,0 +1,123 @@
+<!-- File Name :- app.css
+    Student Name :- Raj Koradia
+    Student ID :- 300907532 -->
+<% include ./partials/header.ejs %>
+
+    <div class="container">
+      <div class="jumbotron">
+                <% if (title == "Home") { %>
+                 <center><h1>Welcome to E-Portfolio</h1></center>
+         <br>
+        <h2 class="text-center"><u>Mission Statement</u></h2><br>
+
+      <p class="text-center">I aim to be Software Developer having excellent knowledge in Web Application Development,
+       Programming Languages such as C# and Java, Databases and Software Engineering Methodologies.<br><br>
+      <a href="/about" class="btn btn-dark">Click here to navigate to the About page</a>
+        <% } %>
+
+          <p></p>
+
+        <% if (title == "About") { %>
+             <center><h1>About Me</h1></center>
+             <h4>Name :- Raj Koradia</h4>
+        <br>
+        <br>
+        <img src="/Assets/images/MyPic.jpg" alt="My Picture" width="300" >
+        <br>
+        <br> <p class="text-justify">I am currently pursuing Software Engineering Technology at centennial college 
+        and will be graduating in this coming April. During this time, I have worked with the latest technologies in my classes and 
+        I had the opportunity to gain knowledge in many different programming languages like C#, ASP.Net, Angular etc. 
+        The best thing I like about programing is the challenges you face and new technologies you get to learn. I work extremely well in a team environment and have been a team leader on several of my academic projects. I have also further developed my communications skills throughout my academic career which I feel plays a vital role if working in a team environment.</p>
+        <div class="text-center">
+            <a class="btn btn-info" href ="/Assets/resume/resume.pdf" download>Download My Resume</a>
+        <% } %>
+
+
+         <% if (title == "Projects") { %>
+        <% include ./partials/content.ejs %>   
+        <% } %>
+
+
+        <% if (title == "Services") { %>
+             <img src="/Assets/images/Services.jpg" alt="Services" width="500" align="right" hspace="50"  >
+        <h3>Technical Skills</h3>
+                <ul>
+                    <li>Java</li>
+                    <li>C#</li>
+                     <li>C++</li>
+                    <li>HTML</li>
+                    <li>PHP</li>
+                    <li>ASP.NET</li>
+                    <li>Java Script</li>
+                    <li>SQL/PLSQL</li>
+                    <li>Unix/Linux</li>
+                </ul>
+        <% } %>
+
+        <% if (title == "Contact") { %>
+     
+        <div class="container">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-7">
+                <h2>Contact Form</h2>
+                <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="FirstNameTextField">First Name</label>
+                    <input type="text" class="form-control" 
+                    id="FirstNameTextField" 
+                    placeholder="Enter First Name"
+                    name="firstName"
+                    required>
+                </div>
+                <div class="form-group">
+                    <label for="LastNameTextField">Last Name</label>
+                    <input type="text" class="form-control" 
+                    id="LastNameTextField" 
+                    placeholder="Enter Last Name"
+                    name="lastName"
+                    required>
+                </div>
+                <div class="form-group">
+                    <label for="ContactNumberTextField">Contact Number</label>
+                    <input type="text" class="form-control" 
+                    id="ContactNumberTextField" 
+                    placeholder="Enter Contact Number"
+                    name="contactNumber"
+                    required>
+                </div>
+                <div class="form-group">
+                    <label for="EmailAddressTextField">Email Address</label>
+                    <input type="text" class="form-control" 
+                    id="EmailAddressTextField" 
+                    placeholder="Enter Email Address"
+                    name="emailAddress"
+                    required>
+                </div>
+                <div class="form-group">
+                    <label for="MessageTextField">Message</label>
+                    <input type="text" class="form-control" 
+                    id="MessageTextField" 
+                    placeholder="Enter Message"
+                    name="message"
+                    required>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                <i class="fas fa-edit"></i> Submit</button>
+                <a href="/" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> Cancel</a>
+            </form>
+                
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h4>My Contact Information</h4>
+    <p>Name :- Raj Koradia</p>
+    <p>Address :- 8 Mondeo Drive, Scarborough, Ontario M1P 5C7</p>
+    <p>Phone Number :- 9099707004</p>
+    <p>Email Address :- rajkoradia@ymail.com</p>
+        <% } %>
+      </div>
+    </div>
+
+<% include ./partials/footer.ejs %>
